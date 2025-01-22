@@ -1,2 +1,7 @@
 /raw
-project.toml
+pyproject.toml
+build.sh
+.pypirc
+dist
+setup.cfg
+src/macrotrends.egg-info
