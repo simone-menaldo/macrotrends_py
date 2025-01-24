@@ -37,7 +37,10 @@ class MarketIndexes:
         return df
 
     # Dow Jones - 100 year historical
-    def get_dow_hist(series: str) -> pd.DataFrame:
+    def get_dow_hist(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
         if series == "hist":
 
@@ -135,7 +138,10 @@ class MarketIndexes:
         return df
 
     # NASDAQ - 45 year historical chart
-    def get_nasdaq_hist(series: str) -> pd.DataFrame:
+    def get_nasdaq_hist(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
         if series == "hist":
 
@@ -274,7 +280,10 @@ class MarketIndexes:
         return df
 
     # S&P 500 - 90 Year Historical Chart
-    def get_sp500_hist(series: str) -> pd.DataFrame:
+    def get_sp500_hist(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
         if series == "hist":
 

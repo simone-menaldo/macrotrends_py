@@ -18,8 +18,11 @@ class Energy:
         pass
 
     # Crude Oil Prices - 70 Year Historical Chart
-    def get_cl_hist(series: str) -> pd.DataFrame:
-            
+    def get_cl_hist(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
+
         if series == "hist":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=1369&url=crude-oil-price-history-chart"
@@ -134,7 +137,10 @@ class Energy:
             return df
 
     # Natural Gas Prices - Historical Chart
-    def get_ng_hist(series: str) -> pd.DataFrame:
+    def get_ng_hist(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
         if series == "hist":
 
@@ -232,8 +238,11 @@ class Energy:
         return df
 
     # Heating Oil - Historical Chart
-    def get_ho_hist(series: str) -> pd.DataFrame:
-            
+    def get_ho_hist(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
+
         if series == "hist":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2479&url=heating-oil-prices-historical-chart-data"

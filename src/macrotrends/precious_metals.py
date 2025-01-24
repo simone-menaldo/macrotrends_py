@@ -18,7 +18,10 @@ class PreciousMetals:
         pass
 
     # Gold Prices - 100 Year Historical Chart
-    def get_gold_hist(series: str) -> pd.DataFrame:
+    def get_gold_hist(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
         if series == "hist":
 
@@ -260,7 +263,10 @@ class PreciousMetals:
         return df
 
     # Silver Prices - 100 Year Historical Chart
-    def get_silver_hist(series: str) -> pd.DataFrame:
+    def get_silver_hist(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
         if series == "hist":
 

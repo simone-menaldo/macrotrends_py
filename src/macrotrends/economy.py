@@ -260,7 +260,10 @@ class Economy:
             return df
 
     # Durable Goods Orders - Historical Chart
-    def get_goods_orders(series: str) -> pd.DataFrame:
+    def get_goods_orders(series: str = "hist") -> pd.DataFrame:
+
+        if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
+            raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
         if series == "hist":
 
