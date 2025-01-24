@@ -41,7 +41,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
         
-        return df
+                return df
 
     # Get the population growth rate by country
     def get_pop_growth() -> pd.DataFrame:
@@ -66,7 +66,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the population density by country
     def get_pop_density() -> pd.DataFrame:
@@ -91,7 +91,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the urban population by country
     def get_pop_urban() -> pd.DataFrame:
@@ -116,7 +116,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the rural population by country
     def get_pop_rural() -> pd.DataFrame:
@@ -141,7 +141,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the life expectancy by country
     def get_life_exp() -> pd.DataFrame:
@@ -166,7 +166,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
         
-        return df
+                return df
 
     # Get the birth rate by country
     def get_birth_rate() -> pd.DataFrame:
@@ -191,7 +191,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the death rate by country
     def get_death_rate() -> pd.DataFrame:
@@ -216,7 +216,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the infant mortality rate by country
     def get_infant_mort() -> pd.DataFrame:
@@ -241,7 +241,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the fertility rate by country
     def get_fert_rate() -> pd.DataFrame:
@@ -266,7 +266,7 @@ class Population:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Economy class
 class Economy:
@@ -297,7 +297,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the GDP growth rate by country
     def get_gdp_growth() -> pd.DataFrame:
@@ -322,7 +322,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the GDP per capita by country
     def get_gdp_capita() -> pd.DataFrame:
@@ -347,7 +347,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the GNI by country
     def get_gni() -> pd.DataFrame:
@@ -372,7 +372,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the GNI per capita by country
     def get_gni_capita() -> pd.DataFrame:
@@ -397,7 +397,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the debt to GDP ratio by country
     def get_debt_to_gdp() -> pd.DataFrame:
@@ -422,7 +422,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the GNP by country
     def get_gnp() -> pd.DataFrame:
@@ -447,7 +447,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the inflation rate by country
     def get_inflation() -> pd.DataFrame:
@@ -472,7 +472,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the economic growth rate by country
     def get_econ_growth() -> pd.DataFrame:
@@ -497,7 +497,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the manufacturing level by country
     def get_manufacturing() -> pd.DataFrame:
@@ -522,7 +522,7 @@ class Economy:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Trade class
 class Trade:
@@ -553,7 +553,7 @@ class Trade:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the trade to GDP ratio by country
     def get_trade_to_gdp() -> pd.DataFrame:
@@ -578,7 +578,7 @@ class Trade:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the total exports by country
     def get_exports() -> pd.DataFrame:
@@ -603,7 +603,7 @@ class Trade:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the total imports by country
     def get_imports() -> pd.DataFrame:
@@ -628,7 +628,7 @@ class Trade:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the Foreign Direct Investment by country
     def get_fdi() -> pd.DataFrame:
@@ -653,7 +653,7 @@ class Trade:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the tariff rates by country
     def get_tariffs() -> pd.DataFrame:
@@ -678,7 +678,7 @@ class Trade:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the tourism statistics by country
     def get_tourism_stats() -> pd.DataFrame:
@@ -703,7 +703,7 @@ class Trade:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Health class
 class Health:
@@ -734,7 +734,7 @@ class Health:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the maternal mortality rate by country
     def get_maternal_mort() -> pd.DataFrame:
@@ -759,7 +759,7 @@ class Health:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the smoking rate by country
     def get_smoking_rate() -> pd.DataFrame:
@@ -784,7 +784,7 @@ class Health:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Education class
 class Education:
@@ -815,7 +815,7 @@ class Education:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Development class
 class Development:
@@ -846,7 +846,7 @@ class Development:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the hunger statistics by country
     def get_hunger_stats() -> pd.DataFrame:
@@ -871,7 +871,7 @@ class Development:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the clean water access by country
     def get_clean_water() -> pd.DataFrame:
@@ -896,7 +896,7 @@ class Development:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the electricity access by country
     def get_electricity() -> pd.DataFrame:
@@ -921,7 +921,7 @@ class Development:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Labor Force class
 class LaborForce:
@@ -952,7 +952,7 @@ class LaborForce:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the youth unemployment rate by country
     def get_youth_unemp() -> pd.DataFrame:
@@ -977,7 +977,7 @@ class LaborForce:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the participation rate by country
     def get_part_rate() -> pd.DataFrame:
@@ -1002,7 +1002,7 @@ class LaborForce:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Environment class
 class Environment:
@@ -1033,7 +1033,7 @@ class Environment:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the greenhouse gas emissions by country
     def get_ghg() -> pd.DataFrame:
@@ -1058,7 +1058,7 @@ class Environment:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the renewable energy by country
     def get_renew() -> pd.DataFrame:
@@ -1083,7 +1083,7 @@ class Environment:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the fossil fuel by country
     def get_fossil_fuel() -> pd.DataFrame:
@@ -1108,7 +1108,7 @@ class Environment:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the coal consumption by country
     def get_coal() -> pd.DataFrame:
@@ -1133,7 +1133,7 @@ class Environment:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Crime class
 class Crime:
@@ -1164,7 +1164,7 @@ class Crime:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the murder rate by country
     def get_murder_rate() -> pd.DataFrame:
@@ -1189,7 +1189,7 @@ class Crime:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Immigration class
 class Immigration:
@@ -1220,7 +1220,7 @@ class Immigration:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the net migration by country 
     def get_net_migration() -> pd.DataFrame:
@@ -1245,7 +1245,7 @@ class Immigration:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the refugee statistics by country
     def get_refugee_stats() -> pd.DataFrame:
@@ -1270,7 +1270,7 @@ class Immigration:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
     
 # Other class
 class Other:
@@ -1301,7 +1301,7 @@ class Other:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the military size by country
     def get_military_size() -> pd.DataFrame:
@@ -1326,7 +1326,7 @@ class Other:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the suicide rate by country
     def get_suicide_rate() -> pd.DataFrame:
@@ -1351,7 +1351,7 @@ class Other:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the education spending by country
     def get_edu_spending() -> pd.DataFrame:
@@ -1376,7 +1376,7 @@ class Other:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the surface area by country
     def get_surface() -> pd.DataFrame:
@@ -1401,7 +1401,7 @@ class Other:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
 
     # Get the arable land by country
     def get_arable_land() -> pd.DataFrame:
@@ -1426,4 +1426,4 @@ class Other:
                 df.set_index(df.columns[0], inplace=True)
                 df = df.astype(float)
 
-        return df
+                return df
