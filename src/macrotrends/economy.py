@@ -35,6 +35,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # National Unemployment Rate
     def get_unemp() -> pd.DataFrame:
 
@@ -52,6 +56,10 @@ class Economy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Initial Jobless Claims - Historical Chart
     def get_init_jobless_claims() -> pd.DataFrame:
@@ -71,6 +79,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Real Retail Sales
     def get_retail_sales() -> pd.DataFrame:
 
@@ -88,6 +100,10 @@ class Economy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Auto and Light Truck Sales Historical Chart
     def get_auto_sales() -> pd.DataFrame:
@@ -107,6 +123,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # U6 Unemployment Rate
     def get_u6_unemp() -> pd.DataFrame:
 
@@ -125,6 +145,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Debt to GDP Ratio
     def get_debt_to_gdp() -> pd.DataFrame:
 
@@ -142,6 +166,10 @@ class Economy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # National Debt By President
     def get_debt_pres() -> pd.DataFrame:
@@ -167,6 +195,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Historical Inflation Rate by Year
     def get_infl_by_year() -> pd.DataFrame:
 
@@ -187,6 +219,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Unemployment Rate by Race
     def get_unemp_race() -> pd.DataFrame:
 
@@ -204,6 +240,10 @@ class Economy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Unemployment Rate by Education
     def get_unemp_edu() -> pd.DataFrame:
@@ -223,6 +263,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Unemployment Rate - College Graduates
     def get_unemp_grad() -> pd.DataFrame:
 
@@ -241,6 +285,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Unemployment Rate - Men vs Women
     def get_unemp_sex() -> pd.DataFrame:
 
@@ -258,6 +306,10 @@ class Economy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Durable Goods Orders - Historical Chart
     def get_goods_orders(series: str = "hist") -> pd.DataFrame:
@@ -282,6 +334,12 @@ class Economy:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
         
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=DGORDER"
@@ -298,6 +356,12 @@ class Economy:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
         
@@ -316,6 +380,12 @@ class Economy:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
         
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=DGORDER"
@@ -329,6 +399,12 @@ class Economy:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_fed":
         
@@ -344,6 +420,12 @@ class Economy:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_recession":
         
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=7&series_id=DGORDER"
@@ -358,7 +440,11 @@ class Economy:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
-        return df
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
     # Industrial Production - Historical Chart
     def get_ind_prod() -> pd.DataFrame:
@@ -377,6 +463,10 @@ class Economy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # 5 Year 5 Year Forward Inflation Expectation
     def get_5y_fwd_infl() -> pd.DataFrame:
@@ -397,6 +487,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Capacity Utilization Rate - Historical Chart
     def get_capacity_util() -> pd.DataFrame:
 
@@ -414,6 +508,10 @@ class Economy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Black Unemployment Rate
     def get_black_unemp() -> pd.DataFrame:
@@ -433,6 +531,10 @@ class Economy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Continued Jobless Claims - Historical Chart
     def get_cont_jobless_claims() -> pd.DataFrame:
 
@@ -450,3 +552,7 @@ class Economy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")

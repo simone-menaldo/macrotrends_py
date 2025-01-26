@@ -35,6 +35,10 @@ class ExchangeRates:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Euro Dollar Exchange Rate - Historical Chart
     def get_eur_usd_hist() -> pd.DataFrame:
 
@@ -52,6 +56,10 @@ class ExchangeRates:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Pound Dollar Exchange Rate - Historical Chart
     def get_gbp_usd_hist() -> pd.DataFrame:
@@ -71,6 +79,10 @@ class ExchangeRates:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Dollar Yen Exchange Rate - Historical Chart
     def get_usd_jpy_hist() -> pd.DataFrame:
 
@@ -88,6 +100,10 @@ class ExchangeRates:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # AUD US Dollar Exchange Rate - Historical Chart
     def get_aud_usd_hist() -> pd.DataFrame:
@@ -107,6 +123,10 @@ class ExchangeRates:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Euro Swiss Franc Exchange Rate - Historical Chart
     def get_eur_chf_hist() -> pd.DataFrame:
 
@@ -124,6 +144,10 @@ class ExchangeRates:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Euro Pound Exchange Rate - Historical Chart
     def get_eur_gbp_hist() -> pd.DataFrame:
@@ -143,6 +167,10 @@ class ExchangeRates:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Euro Yen Exchange Rate - Historical Chart
     def get_eur_jpy_hist() -> pd.DataFrame:
 
@@ -160,6 +188,10 @@ class ExchangeRates:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Pound Yen Exchange Rate - Historical Chart
     def get_gbp_jpy_hist() -> pd.DataFrame:
@@ -179,6 +211,10 @@ class ExchangeRates:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # NZD - US Dollar Exchange Rate - Historical Chart
     def get_nzd_usd_hist() -> pd.DataFrame:
 
@@ -196,6 +232,10 @@ class ExchangeRates:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # US Dollar Franc Exchange Rate - Historical Chart
     def get_usd_chf_hist() -> pd.DataFrame:
@@ -215,6 +255,10 @@ class ExchangeRates:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # US Dollar Peso Exchange Rate - Historical Chart
     def get_usd_mxn_hist() -> pd.DataFrame:
 
@@ -232,6 +276,10 @@ class ExchangeRates:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # USD SGD Exchange Rate - Historical Chart
     def get_usd_sdg_hist() -> pd.DataFrame:
@@ -251,6 +299,10 @@ class ExchangeRates:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Dollar Yuan Exchange Rate - Historical Chart
     def get_usd_cny_hist() -> pd.DataFrame:
 
@@ -268,3 +320,7 @@ class ExchangeRates:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")

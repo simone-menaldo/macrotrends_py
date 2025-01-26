@@ -6,3 +6,4 @@ dist
 setup.cfg
 src/macrotrends.egg-info
 test
+final

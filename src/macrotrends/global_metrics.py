@@ -43,6 +43,14 @@ class Population:
         
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the population growth rate by country
     def get_pop_growth() -> pd.DataFrame:
 
@@ -67,6 +75,14 @@ class Population:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the population density by country
     def get_pop_density() -> pd.DataFrame:
@@ -93,6 +109,14 @@ class Population:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the urban population by country
     def get_pop_urban() -> pd.DataFrame:
 
@@ -117,6 +141,14 @@ class Population:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the rural population by country
     def get_pop_rural() -> pd.DataFrame:
@@ -143,6 +175,14 @@ class Population:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the life expectancy by country
     def get_life_exp() -> pd.DataFrame:
 
@@ -167,6 +207,14 @@ class Population:
                 df = df.astype(float)
         
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the birth rate by country
     def get_birth_rate() -> pd.DataFrame:
@@ -193,6 +241,14 @@ class Population:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the death rate by country
     def get_death_rate() -> pd.DataFrame:
 
@@ -217,6 +273,14 @@ class Population:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the infant mortality rate by country
     def get_infant_mort() -> pd.DataFrame:
@@ -243,6 +307,14 @@ class Population:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the fertility rate by country
     def get_fert_rate() -> pd.DataFrame:
 
@@ -267,6 +339,14 @@ class Population:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Economy class
 class Economy:
@@ -299,6 +379,14 @@ class Economy:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the GDP growth rate by country
     def get_gdp_growth() -> pd.DataFrame:
 
@@ -323,6 +411,14 @@ class Economy:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the GDP per capita by country
     def get_gdp_capita() -> pd.DataFrame:
@@ -349,6 +445,14 @@ class Economy:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the GNI by country
     def get_gni() -> pd.DataFrame:
 
@@ -373,6 +477,14 @@ class Economy:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the GNI per capita by country
     def get_gni_capita() -> pd.DataFrame:
@@ -399,6 +511,14 @@ class Economy:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the debt to GDP ratio by country
     def get_debt_to_gdp() -> pd.DataFrame:
 
@@ -423,6 +543,14 @@ class Economy:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the GNP by country
     def get_gnp() -> pd.DataFrame:
@@ -449,6 +577,14 @@ class Economy:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the inflation rate by country
     def get_inflation() -> pd.DataFrame:
 
@@ -473,6 +609,14 @@ class Economy:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the economic growth rate by country
     def get_econ_growth() -> pd.DataFrame:
@@ -499,6 +643,14 @@ class Economy:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the manufacturing level by country
     def get_manufacturing() -> pd.DataFrame:
 
@@ -523,6 +675,14 @@ class Economy:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Trade class
 class Trade:
@@ -555,6 +715,14 @@ class Trade:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the trade to GDP ratio by country
     def get_trade_to_gdp() -> pd.DataFrame:
 
@@ -579,6 +747,14 @@ class Trade:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the total exports by country
     def get_exports() -> pd.DataFrame:
@@ -605,6 +781,14 @@ class Trade:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the total imports by country
     def get_imports() -> pd.DataFrame:
 
@@ -629,6 +813,14 @@ class Trade:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the Foreign Direct Investment by country
     def get_fdi() -> pd.DataFrame:
@@ -655,6 +847,14 @@ class Trade:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the tariff rates by country
     def get_tariffs() -> pd.DataFrame:
 
@@ -680,6 +880,14 @@ class Trade:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the tourism statistics by country
     def get_tourism_stats() -> pd.DataFrame:
 
@@ -704,6 +912,14 @@ class Trade:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Health class
 class Health:
@@ -736,6 +952,14 @@ class Health:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the maternal mortality rate by country
     def get_maternal_mort() -> pd.DataFrame:
 
@@ -761,6 +985,14 @@ class Health:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the smoking rate by country
     def get_smoking_rate() -> pd.DataFrame:
 
@@ -785,6 +1017,14 @@ class Health:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Education class
 class Education:
@@ -816,6 +1056,14 @@ class Education:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Development class
 class Development:
@@ -848,6 +1096,14 @@ class Development:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the hunger statistics by country
     def get_hunger_stats() -> pd.DataFrame:
 
@@ -872,6 +1128,14 @@ class Development:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the clean water access by country
     def get_clean_water() -> pd.DataFrame:
@@ -898,6 +1162,14 @@ class Development:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the electricity access by country
     def get_electricity() -> pd.DataFrame:
 
@@ -922,6 +1194,14 @@ class Development:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Labor Force class
 class LaborForce:
@@ -954,6 +1234,14 @@ class LaborForce:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the youth unemployment rate by country
     def get_youth_unemp() -> pd.DataFrame:
 
@@ -979,6 +1267,14 @@ class LaborForce:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the participation rate by country
     def get_part_rate() -> pd.DataFrame:
 
@@ -1003,6 +1299,14 @@ class LaborForce:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Environment class
 class Environment:
@@ -1035,6 +1339,14 @@ class Environment:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the greenhouse gas emissions by country
     def get_ghg() -> pd.DataFrame:
 
@@ -1059,6 +1371,14 @@ class Environment:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the renewable energy by country
     def get_renew() -> pd.DataFrame:
@@ -1085,6 +1405,14 @@ class Environment:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the fossil fuel by country
     def get_fossil_fuel() -> pd.DataFrame:
 
@@ -1110,6 +1438,14 @@ class Environment:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the coal consumption by country
     def get_coal() -> pd.DataFrame:
 
@@ -1134,6 +1470,14 @@ class Environment:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Crime class
 class Crime:
@@ -1166,6 +1510,14 @@ class Crime:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the murder rate by country
     def get_murder_rate() -> pd.DataFrame:
 
@@ -1190,6 +1542,14 @@ class Crime:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Immigration class
 class Immigration:
@@ -1222,6 +1582,14 @@ class Immigration:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the net migration by country 
     def get_net_migration() -> pd.DataFrame:
 
@@ -1247,6 +1615,14 @@ class Immigration:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the refugee statistics by country
     def get_refugee_stats() -> pd.DataFrame:
 
@@ -1271,6 +1647,14 @@ class Immigration:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
     
 # Other class
 class Other:
@@ -1303,6 +1687,14 @@ class Other:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the military size by country
     def get_military_size() -> pd.DataFrame:
 
@@ -1327,6 +1719,14 @@ class Other:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the suicide rate by country
     def get_suicide_rate() -> pd.DataFrame:
@@ -1353,6 +1753,14 @@ class Other:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the education spending by country
     def get_edu_spending() -> pd.DataFrame:
 
@@ -1377,6 +1785,14 @@ class Other:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the surface area by country
     def get_surface() -> pd.DataFrame:
@@ -1403,6 +1819,14 @@ class Other:
 
                 return df
 
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the arable land by country
     def get_arable_land() -> pd.DataFrame:
 
@@ -1427,3 +1851,11 @@ class Other:
                 df = df.astype(float)
 
                 return df
+
+            else:
+
+                print("No table found")
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")

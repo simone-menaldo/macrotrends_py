@@ -40,6 +40,12 @@ class Energy:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=DCOILWTICO"
@@ -56,6 +62,12 @@ class Energy:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
 
@@ -74,6 +86,12 @@ class Energy:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=DCOILWTICO"
@@ -87,6 +105,12 @@ class Energy:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_fed":
 
@@ -102,6 +126,12 @@ class Energy:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_recession":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=7&series_id=DCOILWTICO"
@@ -116,7 +146,11 @@ class Energy:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
-        return df
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
     # Crude Oil vs S&P 500
     def get_cl_vs_sp500() -> pd.DataFrame:
@@ -135,6 +169,10 @@ class Energy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Natural Gas Prices - Historical Chart
     def get_ng_hist(series: str = "hist") -> pd.DataFrame:
@@ -159,6 +197,12 @@ class Energy:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=DHHNGSP"
@@ -175,6 +219,12 @@ class Energy:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
 
@@ -193,6 +243,12 @@ class Energy:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=DHHNGSP"
@@ -206,6 +262,12 @@ class Energy:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_fed":
 
@@ -221,6 +283,12 @@ class Energy:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_recession":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=7&series_id=DHHNGSP"
@@ -235,7 +303,11 @@ class Energy:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Heating Oil - Historical Chart
     def get_ho_hist(series: str = "hist") -> pd.DataFrame:
@@ -260,6 +332,12 @@ class Energy:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=DHOILNYH"
@@ -276,6 +354,12 @@ class Energy:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
 
@@ -294,6 +378,12 @@ class Energy:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=DHOILNYH"
@@ -307,6 +397,12 @@ class Energy:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_fed":
 
@@ -322,6 +418,12 @@ class Energy:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_recession":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=7&series_id=DHOILNYH"
@@ -335,8 +437,12 @@ class Energy:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+            
+                return df
 
-                print(df.head())
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
     # Brent Crude Oil Prices - 10 Year Daily
     def get_brent_daily() -> pd.DataFrame:
@@ -358,6 +464,10 @@ class Energy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Oil Prices vs Natural Gas
     def get_oil_vs_ng() -> pd.DataFrame:
 
@@ -375,6 +485,10 @@ class Energy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Oil Prices vs Gasoline Prices
     def get_oil_vs_gasoline() -> pd.DataFrame:
@@ -394,6 +508,10 @@ class Energy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Oil Prices vs Propane Prices
     def get_oil_vs_propane() -> pd.DataFrame:
 
@@ -411,6 +529,10 @@ class Energy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # WTI Crude Oil - 10 Year Daily
     def get_wti_daily() -> pd.DataFrame:
@@ -432,6 +554,10 @@ class Energy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # U.S. Crude Oil Production
     def get_us_oil_prod() -> pd.DataFrame:
 
@@ -449,6 +575,10 @@ class Energy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # U.S. Crude Oil Exports
     def get_us_oil_exp() -> pd.DataFrame:
@@ -468,6 +598,10 @@ class Energy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Saudi Arabia Crude Oil Production
     def get_saudi_oil_prod() -> pd.DataFrame:
 
@@ -486,6 +620,10 @@ class Energy:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # U.S. Crude Oil Reserves
     def get_us_oil_reserves() -> pd.DataFrame:
 
@@ -503,3 +641,7 @@ class Energy:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")

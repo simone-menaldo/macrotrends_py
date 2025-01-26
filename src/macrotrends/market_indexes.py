@@ -34,7 +34,11 @@ class MarketIndexes:
             df = df.astype(float)
             df.set_index(df.columns[1], inplace=True)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow Jones - 100 year historical
     def get_dow_hist(series: str = "hist") -> pd.DataFrame:
@@ -59,6 +63,12 @@ class MarketIndexes:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=DJIA"
@@ -75,6 +85,12 @@ class MarketIndexes:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
 
@@ -93,6 +109,12 @@ class MarketIndexes:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=DJIA"
@@ -106,6 +128,12 @@ class MarketIndexes:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_fed":
 
@@ -121,6 +149,12 @@ class MarketIndexes:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_recession":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=7&series_id=DJIA"
@@ -135,7 +169,11 @@ class MarketIndexes:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # NASDAQ - 45 year historical chart
     def get_nasdaq_hist(series: str = "hist") -> pd.DataFrame:
@@ -161,6 +199,12 @@ class MarketIndexes:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=NASDAQCOM"
@@ -177,6 +221,12 @@ class MarketIndexes:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
 
@@ -195,6 +245,12 @@ class MarketIndexes:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=NASDAQCOM"
@@ -210,6 +266,12 @@ class MarketIndexes:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_fed":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=9&series_id=NASDAQCOM"
@@ -223,6 +285,12 @@ class MarketIndexes:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_recession":
 
@@ -238,7 +306,11 @@ class MarketIndexes:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 Earnings History
     def get_sp500_eps() -> pd.DataFrame:
@@ -257,7 +329,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow Jones - 10 Year Daily
     def get_dow_daily() -> pd.DataFrame:
@@ -277,7 +353,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 - 90 Year Historical Chart
     def get_sp500_hist(series: str = "hist") -> pd.DataFrame:
@@ -302,6 +382,12 @@ class MarketIndexes:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=SP500"
@@ -318,6 +404,12 @@ class MarketIndexes:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
 
@@ -336,6 +428,12 @@ class MarketIndexes:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=SP500"
@@ -349,6 +447,12 @@ class MarketIndexes:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_fed":
 
@@ -364,6 +468,12 @@ class MarketIndexes:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_recession":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=7&series_id=SP500"
@@ -378,7 +488,11 @@ class MarketIndexes:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Stock Market Performance by President
     def get_pres_perf() -> pd.DataFrame:
@@ -395,7 +509,11 @@ class MarketIndexes:
             df = pd.DataFrame(raw_dict)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 by President
     def get_sp500_pres() -> pd.DataFrame:
@@ -412,7 +530,11 @@ class MarketIndexes:
             df = pd.DataFrame(raw_dict)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow Jones - 1929 Bear Market
     def get_dow_1929() -> pd.DataFrame:
@@ -432,7 +554,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 - 10 Year Daily
     def get_sp500_daily() -> pd.DataFrame:
@@ -452,7 +578,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # NASDAQ - 10 Year Daily
     def get_nasdaq_daily() -> pd.DataFrame:
@@ -472,7 +602,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 YTD Performance
     def get_sp500_ytd() -> pd.DataFrame:
@@ -489,7 +623,11 @@ class MarketIndexes:
             df = pd.DataFrame(raw_dict)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow Jones YTD Performance
     def get_dow_ytd() -> pd.DataFrame:
@@ -506,7 +644,11 @@ class MarketIndexes:
             df = pd.DataFrame(raw_dict)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 Historical Annual Returns
     def get_sp500_rets() -> pd.DataFrame:
@@ -526,7 +668,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # NASDAQ YTD Performance
     def get_nasdaq_ytd() -> pd.DataFrame:
@@ -543,7 +689,11 @@ class MarketIndexes:
             df = pd.DataFrame(raw_dict)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow Jones vs NASDAQ Since 1971
     def get_dow_vs_nasdaq() -> pd.DataFrame:
@@ -569,7 +719,11 @@ class MarketIndexes:
 
             df = pd.concat([df1, df2], axis=1)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow to GDP Ratio
     def get_dow_to_gdp() -> pd.DataFrame:
@@ -587,7 +741,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 PE Ratio Historical Chart
     def get_sp500_pe() -> pd.DataFrame:
@@ -605,7 +763,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Shanghai Composite (China Stock Market)
     def get_shanghai_hist() -> pd.DataFrame:
@@ -625,7 +787,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Nikkei 225 Index - Historical Chart
     def get_nikkei_hist() -> pd.DataFrame:
@@ -645,7 +811,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Hang Seng Composite Index - Historical Chart
     def get_hang_seng_hist() -> pd.DataFrame:
@@ -665,7 +835,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # DAX 30 Index - Historical Chart
     def get_dax_hist() -> pd.DataFrame:
@@ -685,7 +859,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # CAC 40 Index - Historical Chart
     def get_cac_hist() -> pd.DataFrame:
@@ -705,7 +883,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # BOVESPA Index - Historical Chart
     def get_bovespa_hist() -> pd.DataFrame:
@@ -725,7 +907,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # NASDAQ to Dow Jones Ratio
     def get_nasdaq_to_dow() -> pd.DataFrame:
@@ -743,7 +929,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 vs Durable Goods Orders
     def get_sp500_vs_durables() -> pd.DataFrame:
@@ -761,7 +951,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # VIX Volatility Index - Historical Chart
     def get_vix_hist() -> pd.DataFrame:
@@ -780,7 +974,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Stock Market by President (From Election Date)
     def get_stock_mkt_pres() -> pd.DataFrame:
@@ -797,7 +995,11 @@ class MarketIndexes:
             df = pd.DataFrame(raw_dict)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 by President (From Election Date)
     def get_sp500_pres() -> pd.DataFrame:
@@ -814,7 +1016,11 @@ class MarketIndexes:
             df = pd.DataFrame(raw_dict)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Trump Stock Market Performance
     def get_trump_perf() -> pd.DataFrame:
@@ -831,7 +1037,11 @@ class MarketIndexes:
             df = pd.DataFrame(raw_dict)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow Jones By Year
     def get_dow_rets() -> pd.DataFrame:
@@ -851,7 +1061,11 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # NASDAQ By Year - Annual Returns
     def get_nasdaq_rets() -> pd.DataFrame:
@@ -871,4 +1085,8 @@ class MarketIndexes:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")

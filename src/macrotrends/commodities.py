@@ -36,6 +36,10 @@ class Commodities:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Soybean Prices - Historical Chart
     def get_soybean_hist() -> pd.DataFrame:
 
@@ -54,6 +58,10 @@ class Commodities:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Corn Prices - Historical Chart
     def get_corn_hist() -> pd.DataFrame:
@@ -74,6 +82,10 @@ class Commodities:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Cotton Prices - Historical Chart
     def get_cotton_hist() -> pd.DataFrame:
 
@@ -92,6 +104,10 @@ class Commodities:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Wheat Prices - Historical Chart
     def get_wheat_hist() -> pd.DataFrame:
@@ -112,6 +128,10 @@ class Commodities:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Coffee Prices - Historical Chart
     def get_coffee_hist() -> pd.DataFrame:
 
@@ -130,6 +150,10 @@ class Commodities:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Oats Prices - Historical Chart
     def get_oats_hist() -> pd.DataFrame:
@@ -150,6 +174,10 @@ class Commodities:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Sugar Prices - Historical Chart
     def get_sugar_hist() -> pd.DataFrame:
 
@@ -168,6 +196,10 @@ class Commodities:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Soybean Oil Prices - Historical Chart
     def get_soybean_oil_hist() -> pd.DataFrame:
@@ -188,6 +220,10 @@ class Commodities:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Lumber Prices - Historical Chart
     def get_lumber_hist() -> pd.DataFrame:
 
@@ -206,3 +242,7 @@ class Commodities:
             df = df.astype(float)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")

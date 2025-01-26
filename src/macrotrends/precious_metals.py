@@ -40,6 +40,12 @@ class PreciousMetals:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=GOLDAMGBD228NLBM"
@@ -56,6 +62,12 @@ class PreciousMetals:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
 
@@ -74,6 +86,12 @@ class PreciousMetals:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=GOLDAMGBD228NLBM"
@@ -87,6 +105,12 @@ class PreciousMetals:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_fed":
 
@@ -102,6 +126,12 @@ class PreciousMetals:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_recession":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=7&series_id=GOLDAMGBD228NLBM"
@@ -116,8 +146,12 @@ class PreciousMetals:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
-        return df
-            
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
     # Gold Prices vs Oil Prices
     def get_gold_vs_oil() -> pd.DataFrame:
 
@@ -134,7 +168,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Gold Prices and U.S Dollar Correlation
     def get_gold_usd_corr() -> pd.DataFrame:
@@ -152,7 +190,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow to Gold Ratio
     def get_dow_to_gold() -> pd.DataFrame:
@@ -170,7 +212,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Gold to Oil Ratio
     def get_gold_to_oil() -> pd.DataFrame:
@@ -188,7 +234,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 to Gold Ratio
     def get_sp500_to_gold() -> pd.DataFrame:
@@ -206,7 +256,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # XAU to Gold Ratio
     def get_xau_to_gold() -> pd.DataFrame:
@@ -224,7 +278,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # HUI to Gold Ratio
     def get_hui_to_gold() -> pd.DataFrame:
@@ -242,7 +300,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Gold to Silver Ratio
     def get_gold_to_silver() -> pd.DataFrame:
@@ -260,7 +322,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Silver Prices - 100 Year Historical Chart
     def get_silver_hist(series: str = "hist") -> pd.DataFrame:
@@ -285,6 +351,12 @@ class PreciousMetals:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "10y":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&template=3&series_id=SILVER"
@@ -301,6 +373,12 @@ class PreciousMetals:
 
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_year":
 
@@ -319,6 +397,12 @@ class PreciousMetals:
                 df.set_index("date", inplace=True)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_president":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=6&series_id=SILVER"
@@ -332,6 +416,12 @@ class PreciousMetals:
 
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
+
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
 
         elif series == "by_fed":
 
@@ -348,6 +438,12 @@ class PreciousMetals:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
+                return df
+
+            else:
+
+                print(f"Data not found. Response status: {res.status_code}")
+
         elif series == "by_recession":
 
             url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?template=7&series_id=SILVER"
@@ -362,7 +458,11 @@ class PreciousMetals:
                 df = pd.DataFrame(raw_dict)
                 df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Fed Balance Sheet vs Gold Price
     def get_fed_vs_gold() -> pd.DataFrame:
@@ -388,7 +488,11 @@ class PreciousMetals:
 
             df = pd.concat([df1, df2], axis=1)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Gold to Monetary Base Ratio
     def get_gold_to_mb() -> pd.DataFrame:
@@ -406,7 +510,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Gold Prices vs Silver Prices
     def get_gold_vs_silver() -> pd.DataFrame:
@@ -424,7 +532,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Platinum Prices - Historical Chart
     def get_platinum_hist() -> pd.DataFrame:
@@ -443,7 +555,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Platinum Prices vs Gold Prices
     def get_platinum_vs_gold() -> pd.DataFrame:
@@ -461,7 +577,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Palladium Prices - Historical Chart
     def get_palladium_hist() -> pd.DataFrame:
@@ -480,7 +600,11 @@ class PreciousMetals:
             df.drop("id", axis=1, inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Gold Price vs Stock Market
     def get_gold_vs_mkt() -> pd.DataFrame:
@@ -506,7 +630,11 @@ class PreciousMetals:
 
             df = pd.concat([df1, df2], axis=1)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Dow to Silver Ratio
     def get_dow_to_silver() -> pd.DataFrame:
@@ -524,7 +652,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Silver to Oil Ratio
     def get_silver_to_oil() -> pd.DataFrame:
@@ -542,7 +674,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Gold Price - Last 10 Years
     def get_gold_price() -> pd.DataFrame:
@@ -562,7 +698,11 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # S&P 500 vs Fed Funds Rate
     def get_sp500_fedrate() -> pd.DataFrame:
@@ -580,4 +720,8 @@ class PreciousMetals:
             df.set_index("date", inplace=True)
             df = df.astype(float)
 
-        return df
+            return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")

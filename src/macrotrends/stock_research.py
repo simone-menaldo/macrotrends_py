@@ -77,6 +77,10 @@ class Prices:
             df.set_index('d', inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the raw historical prices without stock split adjustments for a single stock
     def get_stock_splits(symbol: str) -> pd.DataFrame:
@@ -97,6 +101,10 @@ class Prices:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical market capitalization for a single stock
     def get_market_cap(symbol: str) -> pd.DataFrame:
@@ -117,6 +125,10 @@ class Prices:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
 # Financials class
 class Financials:
@@ -143,6 +155,10 @@ class Financials:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical balance sheet figures for a single stock
     def get_bs(symbol: str, field: str, freq) -> pd.DataFrame:
@@ -163,6 +179,10 @@ class Financials:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical cash flow statement figures for a single stock
     def get_cf(symbol: str, field: str, freq) -> pd.DataFrame:
@@ -183,6 +203,10 @@ class Financials:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical financial ratios for a single stock
     def get_fr(symbol: str, field: str, freq) -> pd.DataFrame:
@@ -203,6 +227,10 @@ class Financials:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
 # Revenue & Profit class
 class RevenueProfit:
@@ -230,6 +258,10 @@ class RevenueProfit:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical gross profit for a single stock
     def get_gross_profit(symbol: str, freq: str) -> pd.DataFrame:
@@ -251,6 +283,10 @@ class RevenueProfit:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical operating income for a single stock
     def get_op_income(symbol: str, freq: str) -> pd.DataFrame:
@@ -272,6 +308,10 @@ class RevenueProfit:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical EBITDA for a single stock
     def get_ebitda(symbol: str, freq: str) -> pd.DataFrame:
@@ -293,6 +333,10 @@ class RevenueProfit:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical net income for a single stock
     def get_net_income(symbol: str, freq: str) -> pd.DataFrame:
@@ -314,6 +358,10 @@ class RevenueProfit:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical EPS for a single stock
     def get_eps(symbol: str, freq: str) -> pd.DataFrame:
@@ -335,6 +383,10 @@ class RevenueProfit:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical shares outstanding for a single stock
     def get_shares_out(symbol: str, freq: str) -> pd.DataFrame:
@@ -356,6 +408,10 @@ class RevenueProfit:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
 # Assets & Liabilities class
 class AssetsLiabilities:
@@ -384,6 +440,10 @@ class AssetsLiabilities:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical cash on hands for a single stock
     def get_cash(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -404,6 +464,10 @@ class AssetsLiabilities:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical long term debt for a single stock
     def get_lt_debt(symbol: str, freq: str) -> pd.DataFrame:
@@ -427,6 +491,10 @@ class AssetsLiabilities:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical total liabilities for a single stock
     def get_tot_liab(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -448,6 +516,10 @@ class AssetsLiabilities:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical shareholders equity for a single stock
     def get_sh_equity(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -468,6 +540,10 @@ class AssetsLiabilities:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
 # Margins class
 class Margins:
@@ -496,6 +572,10 @@ class Margins:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical gross margin for a single stock
     def get_gross_margin(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -516,6 +596,10 @@ class Margins:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical operating margin for a single stock
     def get_op_margin(symbol: str, freq: str) -> pd.DataFrame:
@@ -538,6 +622,10 @@ class Margins:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical EBITDA margin for a single stock
     def get_ebitda_margin(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -558,6 +646,10 @@ class Margins:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical pre-tax margin for a single stock
     def get_pretax_margin(symbol: str, freq: str) -> pd.DataFrame:
@@ -580,6 +672,10 @@ class Margins:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical net margin for a single stock
     def get_net_margin(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -600,6 +696,10 @@ class Margins:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
 # Price Ratios class
 class PriceRatios:
@@ -628,6 +728,10 @@ class PriceRatios:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical P/S ratio for a single stock
     def get_ps(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -648,6 +752,10 @@ class PriceRatios:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical P/B ratio for a single stock
     def get_pb(symbol: str, freq: str) -> pd.DataFrame:
@@ -670,6 +778,10 @@ class PriceRatios:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical price-FCF ratio ratio for a single stock
     def get_pfcf(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -691,6 +803,10 @@ class PriceRatios:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical net worth for a single stock
     def get_net_worth(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -711,6 +827,10 @@ class PriceRatios:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
 # Other Ratios class
 class OtherRatios:
@@ -739,6 +859,10 @@ class OtherRatios:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical quick ratio for a single stock
     def get_qr(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -759,6 +883,10 @@ class OtherRatios:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical D/E ratio for a single stock
     def get_de(symbol: str, freq: str) -> pd.DataFrame:
@@ -782,6 +910,10 @@ class OtherRatios:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical ROE for a single stock
     def get_roe(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -803,6 +935,10 @@ class OtherRatios:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical ROA for a single stock
     def get_roa(symbol: str, freq: str) -> pd.DataFrame:
@@ -826,6 +962,10 @@ class OtherRatios:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical ROI for a single stock
     def get_roi(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -848,6 +988,10 @@ class OtherRatios:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical Return Tang Equity for a single stock
     def get_rte(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -869,6 +1013,10 @@ class OtherRatios:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
         
 # Other Metrics class
 class OtherMetrics:
@@ -898,6 +1046,10 @@ class OtherMetrics:
 
             return df
 
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
+
     # Get the historical number of employees for a single stock
     def get_num_employees(symbol: str, freq: str) -> pd.DataFrame:
 
@@ -919,3 +1071,7 @@ class OtherMetrics:
             df.set_index(df.columns[0], inplace=True)
 
             return df
+
+        else:
+
+            print(f"Data not found. Response status: {res.status_code}")
