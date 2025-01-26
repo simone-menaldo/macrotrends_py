@@ -139,6 +139,9 @@ class Financials:
     # Get the historical income statement figures for a single stock
     def get_is(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
 
+        if field not in IS_FIELDS:
+            raise ValueError(f"Invalid field. Check the global variable IS_FIELDS for a list of the available fields.")
+
         url = f"https://www.macrotrends.net/assets/php/popup_fundamental.php?t={symbol}&s={field}&freq={freq}&statement=financial-statements"
         res = requests.get(url=url, headers=HEADER)
 
@@ -162,6 +165,9 @@ class Financials:
         
     # Get the historical balance sheet figures for a single stock
     def get_bs(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
+
+        if field not in BS_FIELDS:
+            raise ValueError(f"Invalid field. Check the global variable BS_FIELDS for a list of the available fields.")
 
         url = f"https://www.macrotrends.net/assets/php/popup_fundamental.php?t={symbol}&s={field}&freq={freq}&statement=balance-sheet"
         res = requests.get(url=url, headers=HEADER)
@@ -187,6 +193,9 @@ class Financials:
     # Get the historical cash flow statement figures for a single stock
     def get_cf(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
 
+        if field not in CF_FIELDS:
+            raise ValueError(f"Invalid field. Check the global variable CF_FIELDS for a list of the available fields.")
+
         url = f"https://www.macrotrends.net/assets/php/popup_fundamental.php?t={symbol}&s={field}&freq={freq}&statement=cash-flow-statement"
         res = requests.get(url=url, headers=HEADER)
 
@@ -210,6 +219,9 @@ class Financials:
         
     # Get the historical financial ratios for a single stock
     def get_fr(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
+
+        if field not in CF_FIELDS:
+            raise ValueError(f"Invalid field. Check the global variable CF_FIELDS for a list of the available fields.")
 
         url = f"https://www.macrotrends.net/assets/php/popup_fundamental.php?t={symbol}&s={field}&freq={freq}&statement=financial-ratios"
         res = requests.get(url=url, headers=HEADER)
