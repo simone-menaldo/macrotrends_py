@@ -137,7 +137,7 @@ class Financials:
         pass
 
     # Get the historical income statement figures for a single stock
-    def get_is(symbol: str, field: str, freq: str) -> pd.DataFrame:
+    def get_is(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/popup_fundamental.php?t={symbol}&s={field}&freq={freq}&statement=financial-statements"
         res = requests.get(url=url, headers=HEADER)
@@ -161,7 +161,7 @@ class Financials:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical balance sheet figures for a single stock
-    def get_bs(symbol: str, field: str, freq) -> pd.DataFrame:
+    def get_bs(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/popup_fundamental.php?t={symbol}&s={field}&freq={freq}&statement=balance-sheet"
         res = requests.get(url=url, headers=HEADER)
@@ -185,7 +185,7 @@ class Financials:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical cash flow statement figures for a single stock
-    def get_cf(symbol: str, field: str, freq) -> pd.DataFrame:
+    def get_cf(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/popup_fundamental.php?t={symbol}&s={field}&freq={freq}&statement=cash-flow-statement"
         res = requests.get(url=url, headers=HEADER)
@@ -209,7 +209,7 @@ class Financials:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical financial ratios for a single stock
-    def get_fr(symbol: str, field: str, freq) -> pd.DataFrame:
+    def get_fr(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/popup_fundamental.php?t={symbol}&s={field}&freq={freq}&statement=financial-ratios"
         res = requests.get(url=url, headers=HEADER)
@@ -239,7 +239,7 @@ class RevenueProfit:
         pass
 
     # Get the historical revenues for a single stock
-    def get_revenue(symbol: str, freq: str) -> pd.DataFrame:
+    def get_revenue(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=revenue&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -264,7 +264,7 @@ class RevenueProfit:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical gross profit for a single stock
-    def get_gross_profit(symbol: str, freq: str) -> pd.DataFrame:
+    def get_gross_profit(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=gross-profit&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -289,7 +289,7 @@ class RevenueProfit:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical operating income for a single stock
-    def get_op_income(symbol: str, freq: str) -> pd.DataFrame:
+    def get_op_income(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=operating-income&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -314,7 +314,7 @@ class RevenueProfit:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical EBITDA for a single stock
-    def get_ebitda(symbol: str, freq: str) -> pd.DataFrame:
+    def get_ebitda(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=ebitda&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -339,7 +339,7 @@ class RevenueProfit:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical net income for a single stock
-    def get_net_income(symbol: str, freq: str) -> pd.DataFrame:
+    def get_net_income(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=net-income&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -364,7 +364,7 @@ class RevenueProfit:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical EPS for a single stock
-    def get_eps(symbol: str, freq: str) -> pd.DataFrame:
+    def get_eps(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=eps-earnings-per-share-diluted&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -389,7 +389,7 @@ class RevenueProfit:
             print(f"Data not found. Response status: {res.status_code}")
         
     # Get the historical shares outstanding for a single stock
-    def get_shares_out(symbol: str, freq: str) -> pd.DataFrame:
+    def get_shares_out(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=shares-outstanding&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -420,7 +420,7 @@ class AssetsLiabilities:
         pass
 
     # Get the historical total assets for a single stock
-    def get_tot_assets(symbol: str, freq: str) -> pd.DataFrame:
+    def get_tot_assets(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=total-assets&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -445,7 +445,7 @@ class AssetsLiabilities:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical cash on hands for a single stock
-    def get_cash(symbol: str, freq: str) -> pd.DataFrame:
+    def get_cash(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=cash-on-hand&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -470,7 +470,7 @@ class AssetsLiabilities:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical long term debt for a single stock
-    def get_lt_debt(symbol: str, freq: str) -> pd.DataFrame:
+    def get_lt_debt(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=long-term-debt&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -496,7 +496,7 @@ class AssetsLiabilities:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical total liabilities for a single stock
-    def get_tot_liab(symbol: str, freq: str) -> pd.DataFrame:
+    def get_tot_liab(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=total-liabilities&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -521,7 +521,7 @@ class AssetsLiabilities:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical shareholders equity for a single stock
-    def get_sh_equity(symbol: str, freq: str) -> pd.DataFrame:
+    def get_sh_equity(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=total-share-holder-equity&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -577,7 +577,7 @@ class Margins:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical gross margin for a single stock
-    def get_gross_margin(symbol: str, freq: str) -> pd.DataFrame:
+    def get_gross_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=gross-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -602,7 +602,7 @@ class Margins:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical operating margin for a single stock
-    def get_op_margin(symbol: str, freq: str) -> pd.DataFrame:
+    def get_op_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=operating-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -627,7 +627,7 @@ class Margins:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical EBITDA margin for a single stock
-    def get_ebitda_margin(symbol: str, freq: str) -> pd.DataFrame:
+    def get_ebitda_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=ebitda-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -652,7 +652,7 @@ class Margins:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical pre-tax margin for a single stock
-    def get_pretax_margin(symbol: str, freq: str) -> pd.DataFrame:
+    def get_pretax_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=pre-tax-profit-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -677,7 +677,7 @@ class Margins:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical net margin for a single stock
-    def get_net_margin(symbol: str, freq: str) -> pd.DataFrame:
+    def get_net_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=net-profit-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -708,7 +708,7 @@ class PriceRatios:
         pass
 
     # Get the historical PE ratio for a single stock
-    def get_pe(symbol: str, freq: str) -> pd.DataFrame:
+    def get_pe(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=pe-ratio&statement=price-ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -733,7 +733,7 @@ class PriceRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical P/S ratio for a single stock
-    def get_ps(symbol: str, freq: str) -> pd.DataFrame:
+    def get_ps(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=price-sales&statement=price-ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -758,7 +758,7 @@ class PriceRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical P/B ratio for a single stock
-    def get_pb(symbol: str, freq: str) -> pd.DataFrame:
+    def get_pb(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=price-book&statement=price-ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -783,7 +783,7 @@ class PriceRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical price-FCF ratio ratio for a single stock
-    def get_pfcf(symbol: str, freq: str) -> pd.DataFrame:
+    def get_pfcf(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=price-fcf&statement=price-ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -808,7 +808,7 @@ class PriceRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical net worth for a single stock
-    def get_net_worth(symbol: str, freq: str) -> pd.DataFrame:
+    def get_net_worth(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/market_cap.php?t={symbol}"
         res = requests.get(url=url, headers=HEADER)
@@ -839,7 +839,7 @@ class OtherRatios:
         pass
 
     # Get the historical current ratio for a single stock
-    def get_cr(symbol: str, freq: str) -> pd.DataFrame:
+    def get_cr(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=current-ratio&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -864,7 +864,7 @@ class OtherRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical quick ratio for a single stock
-    def get_qr(symbol: str, freq: str) -> pd.DataFrame:
+    def get_qr(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=quick-ratio&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -889,7 +889,7 @@ class OtherRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical D/E ratio for a single stock
-    def get_de(symbol: str, freq: str) -> pd.DataFrame:
+    def get_de(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=debt-equity-ratio&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -915,7 +915,7 @@ class OtherRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical ROE for a single stock
-    def get_roe(symbol: str, freq: str) -> pd.DataFrame:
+    def get_roe(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=roe&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -941,7 +941,7 @@ class OtherRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical ROA for a single stock
-    def get_roa(symbol: str, freq: str) -> pd.DataFrame:
+    def get_roa(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=roa&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -967,7 +967,7 @@ class OtherRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical ROI for a single stock
-    def get_roi(symbol: str, freq: str) -> pd.DataFrame:
+    def get_roi(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=roi&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -993,7 +993,7 @@ class OtherRatios:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical Return Tang Equity for a single stock
-    def get_rte(symbol: str, freq: str) -> pd.DataFrame:
+    def get_rte(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=return-on-tangible-equity&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -1025,7 +1025,7 @@ class OtherMetrics:
         pass
 
     # Get the historical dividend yield for a single stock
-    def get_div_yield(symbol: str, freq: str) -> pd.DataFrame:
+    def get_div_yield(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/dividend_yield.php?t={symbol}"
         res = requests.get(url=url, headers=HEADER)
@@ -1051,7 +1051,7 @@ class OtherMetrics:
             print(f"Data not found. Response status: {res.status_code}")
 
     # Get the historical number of employees for a single stock
-    def get_num_employees(symbol: str, freq: str) -> pd.DataFrame:
+    def get_num_employees(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=number-of-employees&statement=&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
