@@ -21,6 +21,15 @@ class Population:
     # Get the total population by country
     def get_tot_pop() -> pd.DataFrame:
 
+        '''
+        Get the total population by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/population"
         res = requests.get(url=url, headers=HEADER)
 
@@ -53,6 +62,15 @@ class Population:
 
     # Get the population growth rate by country
     def get_pop_growth() -> pd.DataFrame:
+
+        '''
+        Get the population growth rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/population-growth-rate"
         res = requests.get(url=url, headers=HEADER)
@@ -87,6 +105,15 @@ class Population:
     # Get the population density by country
     def get_pop_density() -> pd.DataFrame:
 
+        '''
+        Get the population density by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/population-density"
         res = requests.get(url=url, headers=HEADER)
 
@@ -119,6 +146,15 @@ class Population:
 
     # Get the urban population by country
     def get_pop_urban() -> pd.DataFrame:
+
+        '''
+        Get the urban population by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/urban-population"
         res = requests.get(url=url, headers=HEADER)
@@ -153,6 +189,15 @@ class Population:
     # Get the rural population by country
     def get_pop_rural() -> pd.DataFrame:
 
+        '''
+        Get the rural population by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/rural-population"
         res = requests.get(url=url, headers=HEADER)
 
@@ -185,6 +230,15 @@ class Population:
 
     # Get the life expectancy by country
     def get_life_exp() -> pd.DataFrame:
+
+        '''
+        Get the life expectancy by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/life-expectancy"
         res = requests.get(url=url, headers=HEADER)
@@ -219,6 +273,15 @@ class Population:
     # Get the birth rate by country
     def get_birth_rate() -> pd.DataFrame:
 
+        '''
+        Get the birth rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/birth-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -251,6 +314,15 @@ class Population:
 
     # Get the death rate by country
     def get_death_rate() -> pd.DataFrame:
+
+        '''
+        Get the death rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/death-rate"
         res = requests.get(url=url, headers=HEADER)
@@ -285,6 +357,15 @@ class Population:
     # Get the infant mortality rate by country
     def get_infant_mort() -> pd.DataFrame:
 
+        '''
+        Get the infant mortality rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/infant-mortality-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -317,6 +398,15 @@ class Population:
 
     # Get the fertility rate by country
     def get_fert_rate() -> pd.DataFrame:
+
+        '''
+        Get the fertility rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/fertility-rate"
         res = requests.get(url=url, headers=HEADER)
@@ -357,6 +447,15 @@ class Economy:
     # Get the GDP by country
     def get_gdp() -> pd.DataFrame:
 
+        '''
+        Get the GDP by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/gdp-gross-domestic-product"
         res = requests.get(url=url, headers=HEADER)
 
@@ -389,6 +488,15 @@ class Economy:
 
     # Get the GDP growth rate by country
     def get_gdp_growth() -> pd.DataFrame:
+
+        '''
+        Get the GDP growth rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/gdp-growth-rate"
         res = requests.get(url=url, headers=HEADER)
@@ -423,6 +531,15 @@ class Economy:
     # Get the GDP per capita by country
     def get_gdp_capita() -> pd.DataFrame:
 
+        '''
+        Get the GDP per capita by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/gdp-per-capita"
         res = requests.get(url=url, headers=HEADER)
 
@@ -455,6 +572,15 @@ class Economy:
 
     # Get the GNI by country
     def get_gni() -> pd.DataFrame:
+
+        '''
+        Get the GNI by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/gni-gross-national-income"
         res = requests.get(url=url, headers=HEADER)
@@ -489,6 +615,15 @@ class Economy:
     # Get the GNI per capita by country
     def get_gni_capita() -> pd.DataFrame:
 
+        '''
+        Get the GNI per capita by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/gni-per-capita"
         res = requests.get(url=url, headers=HEADER)
 
@@ -521,6 +656,15 @@ class Economy:
 
     # Get the debt to GDP ratio by country
     def get_debt_to_gdp() -> pd.DataFrame:
+
+        '''
+        Get the debt to GDP ratio by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/debt-to-gdp-ratio"
         res = requests.get(url=url, headers=HEADER)
@@ -555,6 +699,15 @@ class Economy:
     # Get the GNP by country
     def get_gnp() -> pd.DataFrame:
 
+        '''
+        Get the GNP by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/gnp-gross-national-product"
         res = requests.get(url=url, headers=HEADER)
 
@@ -587,6 +740,15 @@ class Economy:
 
     # Get the inflation rate by country
     def get_inflation() -> pd.DataFrame:
+
+        '''
+        Get the inflation rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/inflation-rate-cpi"
         res = requests.get(url=url, headers=HEADER)
@@ -621,6 +783,15 @@ class Economy:
     # Get the economic growth rate by country
     def get_econ_growth() -> pd.DataFrame:
 
+        '''
+        Get the economic growth rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/economic-growth-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -653,6 +824,15 @@ class Economy:
 
     # Get the manufacturing level by country
     def get_manufacturing() -> pd.DataFrame:
+
+        '''
+        Get the manufacturing level by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/manufacturing-output"
         res = requests.get(url=url, headers=HEADER)
@@ -693,6 +873,15 @@ class Trade:
     # Get the trade balance by country
     def get_trade_balance() -> pd.DataFrame:
 
+        '''
+        Get the trade balance by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/trade-balance-deficit"
         res = requests.get(url=url, headers=HEADER)
 
@@ -725,6 +914,15 @@ class Trade:
 
     # Get the trade to GDP ratio by country
     def get_trade_to_gdp() -> pd.DataFrame:
+
+        '''
+        Get the trade to GDP ratio by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/trade-gdp-ratio"
         res = requests.get(url=url, headers=HEADER)
@@ -759,6 +957,15 @@ class Trade:
     # Get the total exports by country
     def get_exports() -> pd.DataFrame:
 
+        '''
+        Get the total exports by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/exports"
         res = requests.get(url=url, headers=HEADER)
 
@@ -791,6 +998,15 @@ class Trade:
 
     # Get the total imports by country
     def get_imports() -> pd.DataFrame:
+
+        '''
+        Get the total imports by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/imports"
         res = requests.get(url=url, headers=HEADER)
@@ -825,6 +1041,15 @@ class Trade:
     # Get the Foreign Direct Investment by country
     def get_fdi() -> pd.DataFrame:
 
+        '''
+        Get the Foreign Direct Investment by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/foreign-direct-investment"
         res = requests.get(url=url, headers=HEADER)
 
@@ -858,6 +1083,15 @@ class Trade:
     # Get the tariff rates by country
     def get_tariffs() -> pd.DataFrame:
 
+        '''
+        Get the tariff rates by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/tariff-rates"
         res = requests.get(url=url, headers=HEADER)
 
@@ -890,6 +1124,15 @@ class Trade:
 
     # Get the tourism statistics by country
     def get_tourism_stats() -> pd.DataFrame:
+
+        '''
+        Get the tourism statistics by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/tourism-statistics"
         res = requests.get(url=url, headers=HEADER)
@@ -930,6 +1173,15 @@ class Health:
     # Get the healthcare spending by country
     def get_health_spend() -> pd.DataFrame:
 
+        '''
+        Get the healthcare spending by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/healthcare-spending"
         res = requests.get(url=url, headers=HEADER)
 
@@ -963,6 +1215,15 @@ class Health:
     # Get the maternal mortality rate by country
     def get_maternal_mort() -> pd.DataFrame:
 
+        '''
+        Get the maternal mortality rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/maternal-mortality-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -995,6 +1256,15 @@ class Health:
 
     # Get the smoking rate by country
     def get_smoking_rate() -> pd.DataFrame:
+
+        '''
+        Get the smoking rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/smoking-rate-statistics"
         res = requests.get(url=url, headers=HEADER)
@@ -1035,6 +1305,15 @@ class Education:
     # Get the literacy rate by country
     def get_literacy_rate() -> pd.DataFrame:
 
+        '''
+        Get the literacy rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/literacy-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1074,6 +1353,15 @@ class Development:
     # Get the poverty rate by country
     def get_poverty_rate() -> pd.DataFrame:
 
+        '''
+        Get the poverty rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/poverty-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1106,6 +1394,15 @@ class Development:
 
     # Get the hunger statistics by country
     def get_hunger_stats() -> pd.DataFrame:
+
+        '''
+        Get the hunger statistics by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/hunger-statistics"
         res = requests.get(url=url, headers=HEADER)
@@ -1140,6 +1437,15 @@ class Development:
     # Get the clean water access by country
     def get_clean_water() -> pd.DataFrame:
 
+        '''
+        Get the clean water access by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/clean-water-access-statistics"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1172,6 +1478,15 @@ class Development:
 
     # Get the electricity access by country
     def get_electricity() -> pd.DataFrame:
+
+        '''
+        Get the electricity access by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/electricity-access-statistics"
         res = requests.get(url=url, headers=HEADER)
@@ -1212,6 +1527,15 @@ class LaborForce:
     # Get the unemployment rate by country
     def get_unemp() -> pd.DataFrame:
 
+        '''
+        Get the unemployment rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/unemployment-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1245,6 +1569,15 @@ class LaborForce:
     # Get the youth unemployment rate by country
     def get_youth_unemp() -> pd.DataFrame:
 
+        '''
+        Get the youth unemployment rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/youth-unemployment-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1277,6 +1610,15 @@ class LaborForce:
 
     # Get the participation rate by country
     def get_part_rate() -> pd.DataFrame:
+
+        '''
+        Get the participation rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/labor-force-participation-rate"
         res = requests.get(url=url, headers=HEADER)
@@ -1317,6 +1659,15 @@ class Environment:
     # Get the carbon emissions by country
     def get_co2() -> pd.DataFrame:
 
+        '''
+        Get the carbon emissions by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/carbon-co2-emissions"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1349,6 +1700,15 @@ class Environment:
 
     # Get the greenhouse gas emissions by country
     def get_ghg() -> pd.DataFrame:
+
+        '''
+        Get the greenhouse gas emissions by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/ghg-greenhouse-gas-emissions"
         res = requests.get(url=url, headers=HEADER)
@@ -1383,6 +1743,15 @@ class Environment:
     # Get the renewable energy by country
     def get_renew() -> pd.DataFrame:
 
+        '''
+        Get the renewable energy by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/renewable-energy-statistics"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1416,6 +1785,15 @@ class Environment:
     # Get the fossil fuel by country
     def get_fossil_fuel() -> pd.DataFrame:
 
+        '''
+        Get the fossil fuel by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/fossil-fuel-consumption"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1448,6 +1826,15 @@ class Environment:
 
     # Get the coal consumption by country
     def get_coal() -> pd.DataFrame:
+
+        '''
+        Get the coal consumption by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/coal-usage-consumption"
         res = requests.get(url=url, headers=HEADER)
@@ -1488,6 +1875,15 @@ class Crime:
     # Get the crime rate by country
     def get_crime_rate() -> pd.DataFrame:
 
+        '''
+        Get the crime rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/crime-rate-statistics"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1520,6 +1916,15 @@ class Crime:
 
     # Get the murder rate by country
     def get_murder_rate() -> pd.DataFrame:
+
+        '''
+        Get the murder rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/murder-homicide-rate"
         res = requests.get(url=url, headers=HEADER)
@@ -1560,6 +1965,15 @@ class Immigration:
     # Get the immigration statistics by country
     def get_immigration_stats() -> pd.DataFrame:
 
+        '''
+        Get the immigration statistics by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/immigration-statistics"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1593,6 +2007,15 @@ class Immigration:
     # Get the net migration by country 
     def get_net_migration() -> pd.DataFrame:
 
+        '''
+        Get the net migration by country 
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/net-migration"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1625,6 +2048,15 @@ class Immigration:
 
     # Get the refugee statistics by country
     def get_refugee_stats() -> pd.DataFrame:
+
+        '''
+        Get the refugee statistics by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/refugee-statistics"
         res = requests.get(url=url, headers=HEADER)
@@ -1665,6 +2097,15 @@ class Other:
     # Get the military spending by country
     def get_military_spending() -> pd.DataFrame:
 
+        '''
+        Get the military spending by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/military-spending-defense-budget"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1697,6 +2138,15 @@ class Other:
 
     # Get the military size by country
     def get_military_size() -> pd.DataFrame:
+
+        '''
+        Get the military size by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/military-army-size"
         res = requests.get(url=url, headers=HEADER)
@@ -1731,6 +2181,15 @@ class Other:
     # Get the suicide rate by country
     def get_suicide_rate() -> pd.DataFrame:
 
+        '''
+        Get the suicide rate by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/suicide-rate"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1763,6 +2222,15 @@ class Other:
 
     # Get the education spending by country
     def get_edu_spending() -> pd.DataFrame:
+
+        '''
+        Get the education spending by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/education-spending"
         res = requests.get(url=url, headers=HEADER)
@@ -1797,6 +2265,15 @@ class Other:
     # Get the surface area by country
     def get_surface() -> pd.DataFrame:
 
+        '''
+        Get the surface area by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/surface-area-km"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1829,6 +2306,15 @@ class Other:
 
     # Get the arable land by country
     def get_arable_land() -> pd.DataFrame:
+
+        '''
+        Get the arable land by country
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/global-metrics/countries/ranking/arable-land"
         res = requests.get(url=url, headers=HEADER)

@@ -20,6 +20,15 @@ class Energy:
     # Crude Oil Prices - 70 Year Historical Chart
     def get_cl_hist(series: str = "hist") -> pd.DataFrame:
 
+        '''
+        Crude Oil Prices - 70 Year Historical Chart
+        ---------------
+        Inputs:
+            series: type of series to import (one of one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession'])
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
             raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
@@ -155,6 +164,15 @@ class Energy:
     # Crude Oil vs S&P 500
     def get_cl_vs_sp500() -> pd.DataFrame:
 
+        '''
+        Crude Oil vs S&P 500
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=1453&url=crude-oil-vs-the-s-p-500"
         res = requests.get(url=url, headers=HEADER)
 
@@ -176,6 +194,15 @@ class Energy:
 
     # Natural Gas Prices - Historical Chart
     def get_ng_hist(series: str = "hist") -> pd.DataFrame:
+
+        '''
+        Natural Gas Prices - Historical Chart
+        ---------------
+        Inputs:
+            series: type of series to import (one of one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession'])
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
             raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
@@ -312,6 +339,15 @@ class Energy:
     # Heating Oil - Historical Chart
     def get_ho_hist(series: str = "hist") -> pd.DataFrame:
 
+        '''
+        Heating Oil - Historical Chart
+        ---------------
+        Inputs:
+            series: type of series to import (one of one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession'])
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         if series not in ["hist", "10y", "by_year", "by_president", "by_fed", "by_recession"]:
             raise ValueError("Series parameter must be one of ['hist', '10y', 'by_year', 'by_president', 'by_fed', 'by_recession']")
 
@@ -447,6 +483,15 @@ class Energy:
     # Brent Crude Oil Prices - 10 Year Daily
     def get_brent_daily() -> pd.DataFrame:
 
+        '''
+        Brent Crude Oil Prices - 10 Year Daily
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2480&url=brent-crude-oil-prices-10-year-daily-chart"
         res = requests.get(url=url, headers=HEADER)
 
@@ -471,6 +516,15 @@ class Energy:
     # Oil Prices vs Natural Gas
     def get_oil_vs_ng() -> pd.DataFrame:
 
+        '''
+        Oil Prices vs Natural Gas
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2500&url=crude-oil-vs-natural-gas-chart"
         res = requests.get(url=url, headers=HEADER)
 
@@ -492,6 +546,15 @@ class Energy:
 
     # Oil Prices vs Gasoline Prices
     def get_oil_vs_gasoline() -> pd.DataFrame:
+
+        '''
+        Oil Prices vs Gasoline Prices
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2501&url=crude-oil-vs-gasoline-prices-chart"
         res = requests.get(url=url, headers=HEADER)
@@ -515,6 +578,15 @@ class Energy:
     # Oil Prices vs Propane Prices
     def get_oil_vs_propane() -> pd.DataFrame:
 
+        '''
+        Oil Prices vs Propane Prices
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2502&url=crude-oil-vs-propane-prices-chart"
         res = requests.get(url=url, headers=HEADER)
 
@@ -536,6 +608,15 @@ class Energy:
 
     # WTI Crude Oil - 10 Year Daily
     def get_wti_daily() -> pd.DataFrame:
+
+        '''
+        WTI Crude Oil - 10 Year Daily
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2516&url=wti-crude-oil-prices-10-year-daily-chart"
         res = requests.get(url=url, headers=HEADER)
@@ -561,6 +642,15 @@ class Energy:
     # U.S. Crude Oil Production
     def get_us_oil_prod() -> pd.DataFrame:
 
+        '''
+        U.S. Crude Oil Production
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2562&url=us-crude-oil-production-historical-chart"
         res = requests.get(url=url, headers=HEADER)
 
@@ -582,6 +672,15 @@ class Energy:
 
     # U.S. Crude Oil Exports
     def get_us_oil_exp() -> pd.DataFrame:
+
+        '''
+        U.S. Crude Oil Exports
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2563&url=us-crude-oil-exports-historical-chart"
         res = requests.get(url=url, headers=HEADER)
@@ -605,6 +704,15 @@ class Energy:
     # Saudi Arabia Crude Oil Production
     def get_saudi_oil_prod() -> pd.DataFrame:
 
+        '''
+        Saudi Arabia Crude Oil Production
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2564&url=saudi-arabia-crude-oil-production-chart"
         res = requests.get(url=url, headers=HEADER)
 
@@ -626,6 +734,15 @@ class Energy:
 
     # U.S. Crude Oil Reserves
     def get_us_oil_reserves() -> pd.DataFrame:
+
+        '''
+        U.S. Crude Oil Reserves
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2565&url=us-crude-oil-reserves-historical-chart"
         res = requests.get(url=url, headers=HEADER)

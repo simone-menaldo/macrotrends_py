@@ -61,6 +61,15 @@ class Prices:
     # Get the historical prices for a single stock
     def get_prices_hist(symbol: str) -> pd.DataFrame:
 
+        '''
+        Get the historical prices for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/stock_price_history.php?t={symbol}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -86,6 +95,15 @@ class Prices:
     # Get the raw historical prices without stock split adjustments for a single stock
     def get_stock_splits(symbol: str) -> pd.DataFrame:
 
+        '''
+        Get the raw historical prices without stock split adjustments for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/stock_splits.php?t={symbol}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -110,6 +128,15 @@ class Prices:
         
     # Get the historical market capitalization for a single stock
     def get_market_cap(symbol: str) -> pd.DataFrame:
+
+        '''
+        Get the historical market capitalization for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/market_cap.php?t={symbol}"
         res = requests.get(url=url, headers=HEADER)
@@ -142,6 +169,17 @@ class Financials:
     # Get the historical income statement figures for a single stock
     def get_is(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical income statement figures for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            field:  name of the required metric
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         if field not in IS_FIELDS:
             raise ValueError(f"Invalid field. Check the global variable IS_FIELDS for a list of the available fields.")
 
@@ -169,6 +207,17 @@ class Financials:
         
     # Get the historical balance sheet figures for a single stock
     def get_bs(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical balance sheet figures for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            field:  name of the required metric
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         if field not in BS_FIELDS:
             raise ValueError(f"Invalid field. Check the global variable BS_FIELDS for a list of the available fields.")
@@ -198,6 +247,17 @@ class Financials:
     # Get the historical cash flow statement figures for a single stock
     def get_cf(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical cash flow statement figures for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            field:  name of the required metric
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         if field not in CF_FIELDS:
             raise ValueError(f"Invalid field. Check the global variable CF_FIELDS for a list of the available fields.")
 
@@ -225,6 +285,17 @@ class Financials:
         
     # Get the historical financial ratios for a single stock
     def get_fr(symbol: str, field: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical financial ratios for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            field:  name of the required metric
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         if field not in FR_FIELDS:
             raise ValueError(f"Invalid field. Check the global variable FR_FIELDS for a list of the available fields.")
@@ -260,6 +331,16 @@ class RevenueProfit:
     # Get the historical revenues for a single stock
     def get_revenue(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical revenues for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=revenue&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -285,6 +366,16 @@ class RevenueProfit:
         
     # Get the historical gross profit for a single stock
     def get_gross_profit(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical gross profit for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=gross-profit&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -312,6 +403,16 @@ class RevenueProfit:
     # Get the historical operating income for a single stock
     def get_op_income(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical operating income for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=operating-income&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -337,6 +438,16 @@ class RevenueProfit:
         
     # Get the historical EBITDA for a single stock
     def get_ebitda(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical EBITDA for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=ebitda&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -364,6 +475,16 @@ class RevenueProfit:
     # Get the historical net income for a single stock
     def get_net_income(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical net income for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=net-income&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -390,6 +511,16 @@ class RevenueProfit:
     # Get the historical EPS for a single stock
     def get_eps(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical EPS for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=eps-earnings-per-share-diluted&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -415,6 +546,16 @@ class RevenueProfit:
         
     # Get the historical shares outstanding for a single stock
     def get_shares_out(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical shares outstanding for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=shares-outstanding&statement=income-statement&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -448,6 +589,16 @@ class AssetsLiabilities:
     # Get the historical total assets for a single stock
     def get_tot_assets(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical total assets for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=total-assets&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -474,6 +625,16 @@ class AssetsLiabilities:
     # Get the historical cash on hands for a single stock
     def get_cash(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical cash on hands for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=cash-on-hand&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -499,6 +660,16 @@ class AssetsLiabilities:
 
     # Get the historical long term debt for a single stock
     def get_lt_debt(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical long term debt for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=long-term-debt&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -527,6 +698,16 @@ class AssetsLiabilities:
     # Get the historical total liabilities for a single stock
     def get_tot_liab(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical total liabilities for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=total-liabilities&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -552,6 +733,16 @@ class AssetsLiabilities:
 
     # Get the historical shareholders equity for a single stock
     def get_sh_equity(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical shareholders equity for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=total-share-holder-equity&statement=balance-sheet&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -585,6 +776,16 @@ class Margins:
     # Get the historical profit margin for a single stock
     def get_profit_margin(symbol: str) -> pd.DataFrame:
 
+        '''
+        Get the historical profit margin for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_metric.php?t={symbol}&chart=profit-margin"
         res = requests.get(url=url, headers=HEADER)
 
@@ -610,6 +811,16 @@ class Margins:
 
     # Get the historical gross margin for a single stock
     def get_gross_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical gross margin for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=gross-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -637,6 +848,16 @@ class Margins:
     # Get the historical operating margin for a single stock
     def get_op_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical operating margin for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=operating-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -662,6 +883,16 @@ class Margins:
 
     # Get the historical EBITDA margin for a single stock
     def get_ebitda_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical EBITDA margin for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=ebitda-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -689,6 +920,16 @@ class Margins:
     # Get the historical pre-tax margin for a single stock
     def get_pretax_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical pre-tax margin for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=pre-tax-profit-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -714,6 +955,16 @@ class Margins:
 
     # Get the historical net margin for a single stock
     def get_net_margin(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical net margin for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=net-profit-margin&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -747,6 +998,16 @@ class PriceRatios:
     # Get the historical PE ratio for a single stock
     def get_pe(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical PE ratio for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=pe-ratio&statement=price-ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -772,6 +1033,16 @@ class PriceRatios:
 
     # Get the historical P/S ratio for a single stock
     def get_ps(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical P/S ratio for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=price-sales&statement=price-ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -799,6 +1070,16 @@ class PriceRatios:
     # Get the historical P/B ratio for a single stock
     def get_pb(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical P/B ratio for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=price-book&statement=price-ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -825,6 +1106,16 @@ class PriceRatios:
     # Get the historical price-FCF ratio ratio for a single stock
     def get_pfcf(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical price-FCF ratio ratio for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=price-fcf&statement=price-ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -850,6 +1141,16 @@ class PriceRatios:
 
     # Get the historical net worth for a single stock
     def get_net_worth(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical net worth for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/market_cap.php?t={symbol}"
         res = requests.get(url=url, headers=HEADER)
@@ -883,6 +1184,16 @@ class OtherRatios:
     # Get the historical current ratio for a single stock
     def get_cr(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical current ratio for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=current-ratio&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -909,6 +1220,16 @@ class OtherRatios:
     # Get the historical quick ratio for a single stock
     def get_qr(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical quick ratio for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=quick-ratio&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -934,6 +1255,16 @@ class OtherRatios:
 
     # Get the historical D/E ratio for a single stock
     def get_de(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical D/E ratio for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=debt-equity-ratio&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -962,6 +1293,16 @@ class OtherRatios:
     # Get the historical ROE for a single stock
     def get_roe(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical ROE for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=roe&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -988,6 +1329,16 @@ class OtherRatios:
 
     # Get the historical ROA for a single stock
     def get_roa(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical ROA for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=roa&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -1016,6 +1367,16 @@ class OtherRatios:
     # Get the historical ROI for a single stock
     def get_roi(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical ROI for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=roi&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1042,6 +1403,16 @@ class OtherRatios:
 
     # Get the historical Return Tang Equity for a single stock
     def get_rte(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical Return Tang Equity for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=return-on-tangible-equity&statement=ratios&freq={freq}"
         res = requests.get(url=url, headers=HEADER)
@@ -1076,6 +1447,16 @@ class OtherMetrics:
     # Get the historical dividend yield for a single stock
     def get_div_yield(symbol: str, freq: str = 'A') -> pd.DataFrame:
 
+        '''
+        Get the historical dividend yield for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/dividend_yield.php?t={symbol}"
         res = requests.get(url=url, headers=HEADER)
 
@@ -1102,6 +1483,16 @@ class OtherMetrics:
 
     # Get the historical number of employees for a single stock
     def get_num_employees(symbol: str, freq: str = 'A') -> pd.DataFrame:
+
+        '''
+        Get the historical number of employees for a single stock
+        ---------------
+        Inputs:
+            symbol: symbol of the stock
+            freq:   data frequency (either 'A' or 'Q')
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/fundamental_iframe.php?t={symbol}&type=number-of-employees&statement=&freq={freq}"
         res = requests.get(url=url, headers=HEADER)

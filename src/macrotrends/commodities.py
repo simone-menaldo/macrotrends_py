@@ -20,6 +20,15 @@ class Commodities:
     # Copper Prices - Historical Chart
     def get_copper_hist() -> pd.DataFrame:
 
+        '''
+        Copper Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=1476&url=copper-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
 
@@ -42,6 +51,15 @@ class Commodities:
 
     # Soybean Prices - Historical Chart
     def get_soybean_hist() -> pd.DataFrame:
+
+        '''
+        Soybean Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2531&url=soybean-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
@@ -66,6 +84,15 @@ class Commodities:
     # Corn Prices - Historical Chart
     def get_corn_hist() -> pd.DataFrame:
 
+        '''
+        Corn Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2532&url=corn-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
 
@@ -88,6 +115,15 @@ class Commodities:
 
     # Cotton Prices - Historical Chart
     def get_cotton_hist() -> pd.DataFrame:
+
+        '''
+        Cotton Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2533&url=cotton-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
@@ -112,6 +148,15 @@ class Commodities:
     # Wheat Prices - Historical Chart
     def get_wheat_hist() -> pd.DataFrame:
 
+        '''
+        Wheat Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2534&url=wheat-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
 
@@ -134,6 +179,15 @@ class Commodities:
 
     # Coffee Prices - Historical Chart
     def get_coffee_hist() -> pd.DataFrame:
+
+        '''
+        Coffee Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2535&url=coffee-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
@@ -158,6 +212,15 @@ class Commodities:
     # Oats Prices - Historical Chart
     def get_oats_hist() -> pd.DataFrame:
 
+        '''
+        Oats Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2536&url=oats-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
 
@@ -180,6 +243,15 @@ class Commodities:
 
     # Sugar Prices - Historical Chart
     def get_sugar_hist() -> pd.DataFrame:
+
+        '''
+        Sugar Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2537&url=sugar-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
@@ -204,6 +276,15 @@ class Commodities:
     # Soybean Oil Prices - Historical Chart
     def get_soybean_oil_hist() -> pd.DataFrame:
 
+        '''
+        Soybean Oil Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
+
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2538&url=soybean-oil-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
 
@@ -226,6 +307,15 @@ class Commodities:
 
     # Lumber Prices - Historical Chart
     def get_lumber_hist() -> pd.DataFrame:
+
+        '''
+        Lumber Prices - Historical Chart
+        ---------------
+        Inputs:
+            None
+        Output:
+            df: Pandas dataframe with the values of the required metric
+        '''
 
         url = f"https://www.macrotrends.net/assets/php/chart_iframe_comp.php?id=2637&url=lumber-prices-historical-chart-data"
         res = requests.get(url=url, headers=HEADER)
