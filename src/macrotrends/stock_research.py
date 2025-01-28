@@ -353,7 +353,6 @@ class RevenueProfit:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -389,7 +388,6 @@ class RevenueProfit:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -425,7 +423,6 @@ class RevenueProfit:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -461,7 +458,6 @@ class RevenueProfit:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -497,7 +493,6 @@ class RevenueProfit:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -533,7 +528,6 @@ class RevenueProfit:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -569,7 +563,6 @@ class RevenueProfit:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -611,7 +604,6 @@ class AssetsLiabilities:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -647,7 +639,6 @@ class AssetsLiabilities:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -678,13 +669,11 @@ class AssetsLiabilities:
             soup = BeautifulSoup(res.text, 'html.parser')
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
-            raw_data = raw_data.replace("null", '"NULL"')
             raw_data = raw_data.replace('null', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -720,7 +709,6 @@ class AssetsLiabilities:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -756,7 +744,6 @@ class AssetsLiabilities:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -798,7 +785,6 @@ class Margins:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -834,7 +820,6 @@ class Margins:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -870,7 +855,6 @@ class Margins:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -906,7 +890,6 @@ class Margins:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -942,7 +925,6 @@ class Margins:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -978,7 +960,6 @@ class Margins:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1020,7 +1001,6 @@ class PriceRatios:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1056,7 +1036,6 @@ class PriceRatios:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1092,7 +1071,6 @@ class PriceRatios:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1128,7 +1106,6 @@ class PriceRatios:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1164,7 +1141,6 @@ class PriceRatios:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1206,7 +1182,6 @@ class OtherRatios:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1242,7 +1217,6 @@ class OtherRatios:
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1273,13 +1247,11 @@ class OtherRatios:
             soup = BeautifulSoup(res.text, 'html.parser')
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
-            raw_data = raw_data.replace("null", '"NULL"')
             raw_data = raw_data.replace('null', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1310,13 +1282,11 @@ class OtherRatios:
             soup = BeautifulSoup(res.text, 'html.parser')
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
-            raw_data = raw_data.replace("null", '"NULL"')
             raw_data = raw_data.replace('null', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1347,13 +1317,11 @@ class OtherRatios:
             soup = BeautifulSoup(res.text, 'html.parser')
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
-            raw_data = raw_data.replace("null", '"NULL"')
             raw_data = raw_data.replace('null', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1384,13 +1352,11 @@ class OtherRatios:
             soup = BeautifulSoup(res.text, 'html.parser')
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
-            raw_data = raw_data.replace("null", '"NULL"')
             raw_data = raw_data.replace('null', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1421,13 +1387,11 @@ class OtherRatios:
             soup = BeautifulSoup(res.text, 'html.parser')
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
-            raw_data = raw_data.replace("null", '"NULL"')
             raw_data = raw_data.replace('null', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1464,13 +1428,11 @@ class OtherMetrics:
             soup = BeautifulSoup(res.text, 'html.parser')
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
-            raw_data = raw_data.replace("null", '"NULL"')
             raw_data = raw_data.replace('null', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
@@ -1501,13 +1463,11 @@ class OtherMetrics:
             soup = BeautifulSoup(res.text, 'html.parser')
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
-            raw_data = raw_data.replace("null", '"NULL"')
             raw_data = raw_data.replace('null', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
 
-            df.replace("NULL", np.nan, inplace=True)
             df[df.columns[1:]] = df[df.columns[1:]].astype(float)
             df[df.columns[0]] = pd.to_datetime(df[df.columns[0]])
             df.set_index(df.columns[0], inplace=True)
