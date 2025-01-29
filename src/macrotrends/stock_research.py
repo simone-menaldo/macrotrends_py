@@ -78,6 +78,7 @@ class Prices:
             
             raw_data = str(soup).split("var dataDaily = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -112,6 +113,7 @@ class Prices:
             
             raw_data = str(soup).split("var dataDaily = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -146,6 +148,7 @@ class Prices:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -191,6 +194,7 @@ class Financials:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -230,6 +234,7 @@ class Financials:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -269,6 +274,7 @@ class Financials:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -308,6 +314,7 @@ class Financials:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -349,6 +356,7 @@ class RevenueProfit:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -384,6 +392,7 @@ class RevenueProfit:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -419,6 +428,7 @@ class RevenueProfit:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -454,6 +464,7 @@ class RevenueProfit:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -489,6 +500,7 @@ class RevenueProfit:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -524,6 +536,7 @@ class RevenueProfit:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -559,6 +572,7 @@ class RevenueProfit:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -600,6 +614,7 @@ class AssetsLiabilities:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -635,6 +650,7 @@ class AssetsLiabilities:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -670,6 +686,7 @@ class AssetsLiabilities:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -705,6 +722,7 @@ class AssetsLiabilities:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -740,6 +758,7 @@ class AssetsLiabilities:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -781,6 +800,7 @@ class Margins:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -816,6 +836,7 @@ class Margins:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -851,6 +872,7 @@ class Margins:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -886,6 +908,7 @@ class Margins:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -921,6 +944,7 @@ class Margins:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -956,6 +980,7 @@ class Margins:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -997,6 +1022,7 @@ class PriceRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1032,6 +1058,7 @@ class PriceRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1067,6 +1094,7 @@ class PriceRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1102,6 +1130,7 @@ class PriceRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1137,6 +1166,7 @@ class PriceRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1178,6 +1208,7 @@ class OtherRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1213,6 +1244,7 @@ class OtherRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1248,6 +1280,7 @@ class OtherRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1283,6 +1316,7 @@ class OtherRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1318,6 +1352,7 @@ class OtherRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1353,6 +1388,7 @@ class OtherRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1388,6 +1424,7 @@ class OtherRatios:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1429,6 +1466,7 @@ class OtherMetrics:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
@@ -1464,6 +1502,7 @@ class OtherMetrics:
             
             raw_data = str(soup).split("var chartData = [", 1)[1].split(']', 1)[0]
             raw_data = raw_data.replace('null', '"NaN"')
+            raw_data = raw_data.replace('NULL', '"NaN"')
             raw_dict = ast.literal_eval(raw_data)
 
             df = pd.DataFrame(raw_dict)
